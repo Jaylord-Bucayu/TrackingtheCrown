@@ -1,10 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import './App.scss';
-import TotalConfirmed from './components/TotalConfirmed';
-import TotalRecover from './components/TotalRecover';
-import TotalDeaths from './components/TotalDeaths';
-import Selection from './components/Selection';
-import Chart from './components/Chart';
+
 import Nav from './components/Nav';
 import Tally from './components/Tally';
 import Vaccines from './components/Vaccines';
@@ -23,7 +19,7 @@ const App = () => {
        
     },[]
     );
-    const API_KEY = 'a75627552eb74618b159c20967b830f0';
+    
     const [country,setCountry] = useState([]);
     const [deaths,setDeaths] = useState(''); 
 
@@ -125,16 +121,7 @@ const App = () => {
 
 const [show,setShow] = useState(false);
 // console.log(country);
-const toggleOption = () => {
-  if(show){
-    setShow(false);
-  }
-  else{
-    setShow(true);
-  }
-}
 
-const click = document.getElementsByClassName('click').value;
   const getSelectionValue = (e) => {
     // alert('ok');
       const selected = e.target.value;
